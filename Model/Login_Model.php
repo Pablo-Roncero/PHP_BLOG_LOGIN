@@ -43,13 +43,19 @@
 
                 echo "The email address introduced: " . $user_email_db . " is not recorded. Would you like to register?";
 
-                echo "<div><button>Yes</button><button>No</button></div>";
+                echo "<div><button onclick='window.location.href= \"Registration_Model.php\" >Yes</button><button>No</button></div>";
 
             }
 
             if (strcmp($user_password_db, $user_check_object->getUserPassword()) !== 0) {
 
-                echo "The password introduced is incorrect.";
+                echo "The password introduced is incorrect. Would you like to update it?";
+
+                // Aquí habría que hacer una actualización de contraseña
+
+                /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+                echo "<div><button onclick='window.location.href= \"Registration_Model.php\" >Yes</button><button>No</button></div>";
 
                 //header("location: ../index.php");
 

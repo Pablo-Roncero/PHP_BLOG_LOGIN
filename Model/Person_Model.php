@@ -27,7 +27,7 @@
         
             $this->db->exec($sql);
 
-            header("location:../index.php");
+            //header("location:../index.php");
         }
 
         
@@ -61,7 +61,7 @@
 
                 echo "Would you like to register?";
 
-                die("<div><button>Yes</button><button>No</button></div>");
+                die("<div><button onclick='window.location.href= \"Registration_Model.php\" '>Yes</button><button>No</button></div>");
 
                 //header("location: ../index.php");
 
