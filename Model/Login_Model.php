@@ -61,7 +61,11 @@
 
             }
 
-            echo "You logged in!";
+            session_start();
+
+            $_SESSION["user"] = $user_email_db;
+
+            header("location: ../View/Blog_View.php");
 
 
 

@@ -17,6 +17,14 @@ a la página de inicio de sesión o a la de registro en un caso dado -->
 
     require_once("View/Form_View.php");
 
+    /*session_start();
+
+    if(!isset($_SESSION["user"])) {
+
+        header ("location:index.php.php");
+
+    }*/
+
     ?>
 
 </body>

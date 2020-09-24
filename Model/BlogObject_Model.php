@@ -28,7 +28,7 @@
 
             $this->counter = 0;
 
-            $sql = ("SELECT * FROM CONTENIDO ORDER BY FECHA");
+            $sql = ("SELECT * FROM BLOG ORDER BY DATE");
 
             $query_retrieve_images = $this->db->query($sql);
             
