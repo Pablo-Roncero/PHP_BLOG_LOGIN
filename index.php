@@ -8,22 +8,24 @@
 </head>
 <body>
 
-    <h1>LOG IN</h1>
-
     <!--  Aquí tendríamos que ver temas de sesiones iniciadas para incluir un condicionar redirigiendo
 a la página de inicio de sesión o a la de registro en un caso dado --> 
 
     <?php
 
-    require_once("View/Form_View.php");
+    if (isset($_COOKIE['user_email']) && (isset($_COOKIE['user_password']))) {
 
-    /*session_start();
+        session_start();
 
-    if(!isset($_SESSION["user"])) {
+        $_SESSION["user"] = $_COOKIE['user_email'];
 
-        header ("location:index.php.php");
+        header("location: View/Blog_View.php");
+        
+    } else {
 
-    }*/
+        require_once("View/Form_View.php");
+        
+    }
 
     ?>
 

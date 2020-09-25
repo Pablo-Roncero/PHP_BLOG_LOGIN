@@ -34,6 +34,8 @@
     </style>
 </head>
 <body>
+
+<h1>LOG IN</h1>
     
 <form action="Model/Login_Model.php" method="post">
     
@@ -49,7 +51,7 @@
             </td>
         </tr>
     
-        <tr><td colspan="2"><input type="submit" name="enviar" value="Log in"></td></tr>
+        <tr><td><input type="checkbox" id="checkbox" name="checkbox">Remember me</td><td colspan="2"><input type="submit" name="enviar" value="Log in"></td></tr>
     
     </table>
     

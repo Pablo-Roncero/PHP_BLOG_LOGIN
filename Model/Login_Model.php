@@ -16,7 +16,8 @@
 
         try {
 
-            // First we create two objects to set the values introduced and retrieve the values from the database
+
+            // Firs we create two objects to set the values introduced and retrieve the values from the database
 
             $user_check_object = new PersonObject_Model;
 
@@ -61,7 +62,17 @@
 
             }
 
+            // We are going to set a cookie to remember the user if the box is clicked
+
             session_start();
+
+            if(isset($_POST["checkbox"])) {
+
+                setcookie("user_email", $_POST["login"], time()+86400, "/");
+
+                setcookie("user_password", $_POST["password"], time()+86400, "/");
+
+            }
 
             $_SESSION["user"] = $user_email_db;
 

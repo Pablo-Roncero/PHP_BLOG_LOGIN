@@ -4,7 +4,7 @@ class PersonObject_Model {
 
     // Properties 
 
-    private $id;
+    private $user_id;
 
     private $user_email;
 

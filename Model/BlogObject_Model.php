@@ -6,8 +6,10 @@
 
     require_once('Connect_Model.php');
 
+
     class BlogObject_Model {
 
+        private $Id_user;
 
         private $db;
 
@@ -20,7 +22,6 @@
         {
             $this->db=Connect::connection();
         }
-
 
         public function getContentsByDate() {
 
@@ -59,12 +60,28 @@
 
         public function insertContent(Blog_Model $blog) {
 
+            session_start();
 
-            $sql = "INSERT INTO BLOG (NAME, DATE, COMMENT, IMAGE) VALUES ('" . $blog->getName() . "','" . $blog->getDate() . "','" . $blog->getComment() . "', '" . $blog->getImage() . "')";
+            $user = $_SESSION["user"];
+
+            $sql_id = "SELECT ID FROM USERS WHERE EMAIL = '$user'";
+
+            $query_retrieve_images = $this->db->query($sql_id);
+
+
+            while($id_registry=$query_retrieve_images->fetch(PDO::FETCH_ASSOC)) {
+
+                $this->Id_user = $id_registry["ID"];
+
+
+            }
+                
+            $sql = "INSERT INTO BLOG (NAME, DATE, COMMENT, IMAGE, ID) VALUES ('" . $blog->getName() . "','" . $blog->getDate() . "','" . $blog->getComment() . "', '" . $blog->getImage() . "', '$this->Id_user')";
 
             $this->db->query($sql);
 
             echo "Registries introduced properly";
+
 
         }
 
