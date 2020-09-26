@@ -24,6 +24,8 @@ a la página de inicio de sesión o a la de registro en un caso dado -->
     } else {
 
         require_once("View/Form_View.php");
+
+        echo "<button><a href='Model/Registration_Model.php'>Registro</a></button>";
         
     }
 

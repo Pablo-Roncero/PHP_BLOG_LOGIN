@@ -20,7 +20,7 @@
 
 <p>This part is only available for registered users</p>
 
-<p><a href="Blog_View.php">Volver</a></p>
+<p><a href="FormBlog_View.php">Volver</a></p>
     
 
     <?php

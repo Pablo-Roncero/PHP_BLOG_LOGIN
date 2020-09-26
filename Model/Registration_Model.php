@@ -54,6 +54,10 @@
     
             $user_register_model = new Person_Model;
 
+            // Now we encrypt the password to send it to our database
+
+            $pre_encrypted_password = password_hash($_POST["password"], PASSWORD_DEFAULT); 
+
             // Here we get the data introduced by the user setting them into the object
 
 
@@ -63,13 +67,15 @@
 
             $user_register_object->setUserEmail($_POST["email"]);
 
-            $user_register_object->setUserPassword($_POST["password"]);
+            $user_register_object->setUserPassword($pre_encrypted_password);
 
             $user_register_object->setUserAge($_POST["age"]);
 
             // Now we use this object as a parameter to introduce data in our database
 
             $user_register_model->setUsers($user_register_object);
+
+            header("location:../index.php");
     
     
     

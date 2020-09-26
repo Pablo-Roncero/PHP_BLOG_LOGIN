@@ -48,7 +48,7 @@
 
             }
 
-            if (strcmp($user_password_db, $user_check_object->getUserPassword()) !== 0) {
+            if (!password_verify($user_password_db, $user_check_object->getUserPassword())) {
 
                 echo "The password introduced is incorrect. Would you like to update it?";
 

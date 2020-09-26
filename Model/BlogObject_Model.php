@@ -38,15 +38,15 @@
 
                 $blog = new Blog_Model();
 
-                $blog->setId($registry["Id"]);
+                $blog->setId($registry["ID"]);
 
-                $blog->setName($registry["Name"]);
+                $blog->setName($registry["NAME"]);
 
-                $blog->setDate($registry["Date"]);
+                $blog->setDate($registry["DATE"]);
 
-                $blog->setComment($registry["Comment"]);
+                $blog->setComment($registry["COMMENT"]);
 
-                $blog->setImage($registry["Image"]);
+                $blog->setImage($registry["IMAGE"]);
 
                 $this->matrix[$this->counter] = $blog;
 

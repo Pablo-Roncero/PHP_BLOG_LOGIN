@@ -13,15 +13,15 @@
 
         if($_COOKIE["user_email"]) {
                 
-            setcookie("user_email", $_POST["login"], time()-3600);
+            setcookie("user_email", $_POST["login"], time()-3600, "/");
 
-            setcookie("user_password", $_POST["password"], time()-3600);
+            setcookie("user_password", $_POST["password"], time()-3600, "/");
 
         }
 
         session_destroy();
     
-        header("location: ../index.php");
+        header("location:../index.php");
     ?>
 
 </body>
