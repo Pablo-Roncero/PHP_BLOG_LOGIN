@@ -76,9 +76,14 @@
 
             }
                 
-            $sql = "INSERT INTO BLOG (NAME, DATE, COMMENT, IMAGE, ID) VALUES ('" . $blog->getName() . "','" . $blog->getDate() . "','" . $blog->getComment() . "', '" . $blog->getImage() . "', '$this->Id_user')";
+            //$sql = "INSERT INTO `BLOG` (`NAME`, `DATE`, `COMMENT`, `IMAGE`, `ID`) VALUES ('" . $blog->getName() . "','" . $blog->getDate() . "','" . $blog->getComment() . "', '" . $blog->getImage() . "', '$this->Id_user')";
+            $sql = "INSERT INTO `BLOG` (`NAME`, `DATE`, `COMMENT`, `IMAGE`, `ID`) VALUES (?, ?, ?, ?, ?)";
+            //'" . $blog->getName() . "','" . $blog->getDate() . "','" . $blog->getComment() . "', '" . $blog->getImage() . "', '$this->Id_user'
 
-            $this->db->query($sql);
+            $this->stmt = $this->db->prepare($sql);
+
+            $this->stmt->execute([$blog->getName(), $blog->getDate(), $blog->getComment(), $blog->getImage(), $this->Id_user]);
+            //$this->db->query($sql);
 
             echo "Registries introduced properly";
 

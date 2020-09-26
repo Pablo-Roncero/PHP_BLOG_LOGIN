@@ -1,3 +1,19 @@
+<?php 
+
+// Code block for forcing users to use HTTPS instead of HTTP
+
+// A SSL certificate might be added to the server
+
+// Commented by now for testing purposes
+
+/*if($_SERVER['SERVER_PORT'] !== 443 &&
+   (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off')) {
+  header('Location: https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+  exit;
+}*/
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

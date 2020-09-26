@@ -23,9 +23,17 @@
 
         public function setUsers(PersonObject_Model $user_set) {
 
-            $sql = "INSERT INTO USERS (NAME, LASTNAME, EMAIL, PASSWORD, AGE) VALUES ('" . $user_set->getUserName() . "','" . $user_set->getUserLastname() . "','" . $user_set->getUserEmail() . "','" . $user_set->getUserPassword() . "','" . $user_set->getUserAge() . "')";
+            
+            $sql = "INSERT INTO `USERS` (`NAME`, `LASTNAME`, `EMAIL`, `PASSWORD`, `AGE`) VALUES (?, ?, ?, ?, ?)";
+            
+            $this->stmt = $this->db->prepare($sql);
+
+            $this->stmt->execute([$user_set->getUserName(), $user_set->getUserLastname(), $user_set->getUserEmail(), $user_set->getUserPassword(), $user_set->getUserAge()]);
+            
+            //'" . $user_set->getUserName() . "','" . $user_set->getUserLastname() . "','" . $user_set->getUserEmail() . "','" . $user_set->getUserPassword() . "','" . $user_set->getUserAge() . "'
+            //$sql = "INSERT INTO `USERS` (`NAME`, `LASTNAME`, `EMAIL`, `PASSWORD`, `AGE`) VALUES ('" . $user_set->getUserName() . "','" . $user_set->getUserLastname() . "','" . $user_set->getUserEmail() . "','" . $user_set->getUserPassword() . "','" . $user_set->getUserAge() . "')";
         
-            $this->db->exec($sql);
+            //$this->db->exec($sql);
 
             //header("location:../index.php");
         }
@@ -37,8 +45,10 @@
             
             $user_email_introduced = $user_check->getUserEmail();
 
+            $sql = "SELECT EMAIL, PASSWORD FROM USERS WHERE EMAIL= '" . $user_email_introduced . "'";
 
-            $sql = "SELECT EMAIL, PASSWORD FROM USERS WHERE EMAIL='" . $user_email_introduced . "'"; 
+            //'" . $user_email_introduced . "'
+            //$sql = "SELECT `EMAIL`, `PASSWORD` FROM `USERS` WHERE `EMAIL`='" . $user_email_introduced . "'"; 
 
             $user_check_db = $this->db->query($sql);
 

@@ -37,7 +37,7 @@
 
 <h1>LOG IN</h1>
     
-<form action="../Model/Login_Model.php" method="post">
+<form action="Model/Login_Model.php" method="post">
     
     <table>
     
