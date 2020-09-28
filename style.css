@@ -85,7 +85,7 @@ input[type="submit"]:hover {
 
 }
 
-.register button {
+/*.register button {
     position: relative;
     left: 50%;
     display:inline-block;
@@ -101,8 +101,7 @@ input[type="submit"]:hover {
     text-align:center;
     transition: all 0.2s;
     cursor: pointer;
-    
-}
+}*/
 
 .register button:hover {
     background-color:#4095c6;
@@ -111,4 +110,47 @@ input[type="submit"]:hover {
 
 .register a {
     text-decoration: none;
+}
+
+/* Giving some style to the buttons section on Blog website */
+
+.log_back {
+    position: relative;
+    left: 500px;
+}
+
+/*.log_back button {
+    position: relative;
+    left: 50%;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+}*/
+
+button {
+    position: relative;
+    left: 50%;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
 }

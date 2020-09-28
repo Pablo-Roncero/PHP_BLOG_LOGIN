@@ -90,6 +90,23 @@
 
         }
 
+        public function getUser($Id) {
+
+            $sql = "SELECT NAME FROM USERS WHERE ID ='" . $Id . "'";
+
+            $query_name = $this->db->query($sql);
+
+            while($name_registry=$query_name->fetch(PDO::FETCH_ASSOC)) {
+
+                $this->name_user = $name_registry["NAME"];
+
+            }
+
+            return $this->name_user;
+
+
+        }
+
 
     }
 

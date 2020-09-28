@@ -83,12 +83,6 @@
 
         }
 
-
-        public function passwordEncryption() {
-
-        }
-
-
     }
 
 ?>
