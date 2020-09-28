@@ -1,0 +1,114 @@
+/* File to give the style to the whole webapp */
+
+/* First we give style to headers */
+
+h1 {
+    color: #7c795d; 
+    font-family: 'Trocchi', serif; 
+    font-size: 45px; 
+    font-weight: bold; 
+    line-height: 48px; 
+    margin: 0;
+    text-align: center;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Body background color */
+
+body {
+    background-color: #003049;
+}
+
+/* Style to the forms embedded in tables */
+
+form {
+
+    position: relative;
+    top: 100px;
+
+}
+
+table {
+    width:50%;
+	margin:auto;
+	background-color:#4040bf;
+	border:solid 2px #000066;
+    padding:5px;
+    border-radius: 9%;
+
+}
+
+.izq {
+    text-align: right;
+}
+
+.der {
+    text-align: left;
+}
+
+td {   
+
+    text-align: center;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color:#4095c6;
+}
+
+/* Registration style */
+
+.register {
+
+    position: relative;
+    top: 150px;
+
+}
+
+.register button {
+    position: relative;
+    left: 50%;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+    
+}
+
+.register button:hover {
+    background-color:#4095c6;
+
+}
+
+.register a {
+    text-decoration: none;
+}

@@ -41,7 +41,9 @@ a la página de inicio de sesión o a la de registro en un caso dado -->
 
         require_once("View/Form_View.php");
 
-        echo "<button><a href='Model/Registration_Model.php'>Registro</a></button>";
+        echo "<div class='register'>
+        <h2>Do not forget to register if you have not yet in order to access to awesome content</h2>
+        <button><a href='Model/Registration_Model.php'>Registration</a></button></div>";
         
     }
 

@@ -3,38 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>REGISTRATION</title>
 
     <style>
 
-        h1 {
-            text-align: center;
-        }
 
         table {
             width: 25%;
-            background-color: #FFC;
-            border: 2px dotted #F00;
             margin: auto;
         }
-
-        .izq {
-            text-align: right;
-        }
-
-        .der {
-            text-align: left;
-        }
-
-        td {   
-
-            text-align: center;
-            padding: 10px;
-        }
-    
+   
     </style>
 </head>
 <body>
+
+    <div class="registration">
+
+            <h1>REGISTER YOURSELF NOW TO START USING THIS SERVICE</h1>
+
+
+    </div>
+
 <?php
 
     require_once("Person_Model.php");
@@ -92,32 +82,32 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <table>
     <tr>
-        <td class="izq">Name:</td><td class="der"><input type="text" name="name" /></td>
+        <td class="izq">Name</td><td class="der"><input type="text" name="name" /></td>
     </tr>
 
     <tr>
-        <td class="izq">Last name:</td>
+        <td class="izq">Last name</td>
         <td class="der"><input type="text" name="lastname">
         </td>
     </tr>
 
     
     <tr>
-        <td class="izq">Email:</td>
+        <td class="izq">Email</td>
         <td class="der"><input type="email" name="email">
         </td>
     </tr>
 
     
     <tr>
-        <td class="izq">Password:</td>
+        <td class="izq">Password</td>
         <td class="der"><input type="password" name="password">
         </td>
     </tr>
 
     
     <tr>
-        <td class="izq">Age:</td>
+        <td class="izq">Age</td>
         <td class="der"><input type="number" name="age">
         </td>
     </tr>

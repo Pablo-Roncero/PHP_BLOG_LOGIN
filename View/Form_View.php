@@ -3,50 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>LOG IN</title>
     <style>
 
-        h1 {
-            text-align: center;
-        }
-
         table {
-            width: 25%;
-            background-color: #FFC;
-            border: 2px dotted #F00;
+            width: 30%;
             margin: auto;
-        }
-
-        .izq {
-            text-align: right;
-        }
-
-        .der {
-            text-align: left;
-        }
-
-        td {   
-
-            text-align: center;
-            padding: 10px;
         }
     
     </style>
 </head>
 <body>
 
-<h1>LOG IN</h1>
+<h1>WELCOME TO OUR WEBSITE TO UPLOAD AND DISCOVER NEW PHOTOS</h1>
     
 <form action="Model/Login_Model.php" method="post">
     
     <table>
     
         <tr>
-            <td class="izq">Email:</td><td class="der"><input type="email" name="login" /></td>
+            <td class="izq">Email</td><td class="der"><input type="email" name="login" /></td>
         </tr>
     
         <tr>
-            <td class="izq">Password:</td>
+            <td class="izq">Password</td>
             <td class="der"><input type="password" name="password">
             </td>
         </tr>
@@ -56,13 +37,6 @@
     </table>
     
 </form>
-
-<?php
-
-
-
-
-?>
 
 </body>
 </html>
