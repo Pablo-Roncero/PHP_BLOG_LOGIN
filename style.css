@@ -15,6 +15,7 @@ h1 {
 
 h2 {
     text-align: center;
+    color: white;
 }
 
 /* Body background color */
@@ -154,3 +155,42 @@ button {
     transition: all 0.2s;
     cursor: pointer;
 }
+
+/* Styling Blog_Controller.php */
+
+.uploaded_photo {
+
+    position: relative;
+    color: white;
+    left: 400px;
+    top: 150px;
+    border: 3px dotted white;
+    padding: 20px 20px;
+    border-radius: 8%;
+    margin-right: 800px;
+
+}
+
+.buttons_uploaded {
+
+    position: relative;
+    top: 250px;
+    left: -80px;
+    z-index: 1;
+
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Styling button Blog in FormBlog_View.php */
+
+.blog {
+
+    position: relative;
+    left: 800px;
+    z-index: 1;
+    bottom: 162px;
+
+}
+
+/* -------------------------------------------------------------------------- */

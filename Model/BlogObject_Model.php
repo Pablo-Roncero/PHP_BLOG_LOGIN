@@ -85,7 +85,7 @@
             $this->stmt->execute([$blog->getName(), $blog->getDate(), $blog->getComment(), $blog->getImage(), $this->Id_user]);
             //$this->db->query($sql);
 
-            echo "Registries introduced properly";
+            echo "<li>Registries introduced properly</li>";
 
 
         }

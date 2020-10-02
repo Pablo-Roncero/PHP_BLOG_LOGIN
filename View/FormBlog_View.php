@@ -49,9 +49,10 @@ table{
     <tr>
     <td colspan="2" align="center">  
     <input type="submit" name="submit_field" id="btn_enviar" value="Submit"></td></tr>
-  <tr><td colspan="2" align="center"><button class="blog"><a href="Blog_View.php">BLOG</a></button></td></tr>
+  <tr><td colspan="2" align="center"></td></tr>
   
   </table>
+  <button class="blog"><a href="Blog_View.php">BLOG</a></button>
 </form>
 <p>&nbsp;</p>
 

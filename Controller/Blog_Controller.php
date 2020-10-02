@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
+<div class="uploaded_photo">
 
 <?php
 
@@ -51,7 +53,8 @@
             }
 
         } else {
-            echo "New entry uploaded</br>";
+            echo "<h1>A NEW ENTRY HAS BEEN ADDED!</h1>
+                <ul></br>";
 
             if((isset($_FILES["image_field"]["name"]) && ($_FILES["image_field"]["error"]==UPLOAD_ERR_OK))) {
 
@@ -59,7 +62,7 @@
 
                 move_uploaded_file($_FILES["image_field"]["tmp_name"], $route_destination . $_FILES["image_field"]["name"]);
 
-                echo "File " . $_FILES["image_field"]["name"] . " was correctly copied at the images directory";
+                echo "<li>File " . $_FILES["image_field"]["name"] . " was correctly copied at the images directory</li>";
 
             } else {
 
@@ -79,7 +82,7 @@
 
         $BlogObject->insertContent($Blog);
 
-        echo "<br /> New blog entry added successfully </br>";
+        echo "<li>New blog entry added successfully</li> </br>";
 
     } catch (Exception $e) {
 
@@ -88,6 +91,11 @@
     }
 
 ?>
-
+    </ul>
+</div>
+<div class="buttons_uploaded">
+    <button><a href="../View/Blog_View.php">Blog</a></button>
+    <button><a href="../View/FormBlog_View.php">New Entry</a></button>
+</div>
 </body>
 </html>
