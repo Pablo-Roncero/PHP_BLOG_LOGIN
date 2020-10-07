@@ -64,18 +64,14 @@
             // Now we check if this Email exists in our database, in case it doesn't, we'll give to the user
             // the option to register themselves by redirecting them to the registration webpage
 
-            if ($this->users == false) {
-
-
-                echo "The address introduced is not registered in our database.";
-
-                echo "Would you like to register?";
-
-                die("<div><button onclick='window.location.href= \"Registration_Model.php\" '>Yes</button><button>No</button></div>");
+            if (empty($this->users)) {
+                    
+                header("location: ../View/Error_View.php");
 
                 //header("location: ../index.php");
 
             } else {
+                //echo $this->users;
                 return $this->users;
             }
 

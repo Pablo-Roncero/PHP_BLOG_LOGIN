@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
-    
+<div class="failed_registration">
+    <ul>
+
     <?php   
 
         //require_once("Connect_Model.php");
@@ -38,17 +41,7 @@
 
             // Now we check whether the email and password match the ones in the database 
 
-            if (strcmp($user_email_db, $user_check_object->getUserEmail()) !== 0) {
-
-                echo $user_email_db . " " . $user_password_db;
-
-                echo "The email address introduced: " . $user_email_db . " is not recorded. Would you like to register?";
-
-                echo "<div><button onclick='window.location.href= \"Registration_Model.php\" >Yes</button><button>No</button></div>";
-
-            }
-
-            if (!password_verify($user_password_db, $user_check_object->getUserPassword())) {
+            if (!password_verify( $user_check_object->getUserPassword(), $user_password_db)) {
 
                 echo "The password introduced is incorrect. Would you like to update it?";
 
@@ -56,29 +49,29 @@
 
                 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-                echo "<div><button onclick='window.location.href= \"Registration_Model.php\" >Yes</button><button>No</button></div>";
+                echo "<div><button class='buttons_failure' onclick='window.location.href= \"Registration_Model.php\" >Yes</button><button class='buttons_failure'>No</button></div>";
 
                 //header("location: ../index.php");
 
+            } else {
+                // We are going to set a cookie to remember the user if the box is clicked
+
+                session_start();
+
+                if(isset($_POST["checkbox"])) {
+
+                    setcookie("user_email", $_POST["login"], time()+86400, "/");
+
+                    setcookie("user_password", $_POST["password"], time()+86400, "/");
+
+                }
+
+                $_SESSION["user"] = $user_email_db;
+
+                header("location: ../View/Blog_View.php");
+
+
             }
-
-            // We are going to set a cookie to remember the user if the box is clicked
-
-            session_start();
-
-            if(isset($_POST["checkbox"])) {
-
-                setcookie("user_email", $_POST["login"], time()+86400, "/");
-
-                setcookie("user_password", $_POST["password"], time()+86400, "/");
-
-            }
-
-            $_SESSION["user"] = $user_email_db;
-
-            header("location: ../View/Blog_View.php");
-
-
 
         } catch (Exception $e) {
 
@@ -86,6 +79,8 @@
         }
 
     ?>
+    </ul>
+</div>
 
 </body>
 </html>
