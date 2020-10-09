@@ -19,6 +19,10 @@
 
         }
 
+        unset($_SESSION["user"]);
+
+        unset($_SESSION["password"]);
+
         session_destroy();
     
         header("location:../index.php");

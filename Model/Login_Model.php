@@ -67,6 +67,7 @@
                 }
 
                 $_SESSION["user"] = $user_email_db;
+                $_SESSION["password"] = $user_password_db;
 
                 header("location: ../View/Blog_View.php");
 

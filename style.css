@@ -183,7 +183,7 @@ button {
 /* -------------------------------------------------------------------------- */
 
 
-/* Styling Blog_Controller.php */
+/* Styling Login_Model.php */
 
 .failed_registration {
 
@@ -219,6 +219,29 @@ button {
     z-index: 1;
     bottom: 162px;
 
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Styling button Blog in Error_View.php */
+
+.error_page {
+    position: relative;
+    left: 450px;
+    top: 200px;
+    color: white;
+    border: 3px dotted white;
+    padding: 20px 20px;
+    border-radius: 8%;
+    margin-right: 800px;
+
+}
+
+.button_failure_email {
+    position: relative;
+    bottom: -100px;
+    left: 0px;
 }
 
 /* -------------------------------------------------------------------------- */

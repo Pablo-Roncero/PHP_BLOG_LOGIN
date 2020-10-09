@@ -14,6 +14,12 @@
 <?php
     session_start();
 
+    
+    if(!$_SESSION['user']) {
+            header("location: ../index.php");
+            exit();
+    }
+
     echo "User: " . $_SESSION["user"] . "<br><br>";
 ?>
 

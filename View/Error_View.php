@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div>
+<div class="error_page">
     <ul>
         <?php
                 
@@ -16,7 +16,7 @@
 
             echo "<li>Would you like to register?</li>";
 
-            echo "<div><button class='buttons_failure' onclick='window.location.href= \"../Model/Registration_Model.php\" '>Yes</button class='buttons_failure'><button>No</button></div>";
+            echo "<div><button class='button_failure_email' onclick='window.location.href= \"../Model/Registration_Model.php\" '>Yes</button></div>";
 
         ?>
     </ul>
