@@ -36,10 +36,14 @@ a la página de inicio de sesión o a la de registro en un caso dado -->
         $_SESSION["user"] = $_COOKIE['user_email'];
 
         header("location: View/Blog_View.php");
+        //require_once("Controller/Blog_Controller.php");
+        // Esto habría que verlo mejor
         
     } else {
 
-        require_once("View/Form_View.php");
+        require_once("Controller/Login_Controller.php");
+
+        //require_once("View/Form_View.php");
 
         echo "<div class='register'>
         <h2>Do not forget to register if you have not yet in order to access to awesome content</h2>
