@@ -116,8 +116,8 @@
 
     </table>
 </form>
-<div>
-    <button onclick= 'window.location.href= "Registration_Model.php"'></button>
+<div class="button register_index">
+    <button onclick= 'window.location.href= "../index.php"'>Back</button>
 </div>
 </body>
 </html>

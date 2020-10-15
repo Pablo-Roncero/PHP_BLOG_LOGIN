@@ -38,6 +38,11 @@
     
 </form>
 
+<div class='register'>
+    <h2>Do not forget to register if you have not yet in order to access to awesome content</h2>
+    <button name="registration"><a name="button" href='Model/Registration_Model.php'>Registration</a></button>
+</div>
+
 </body>
 </html>
 
