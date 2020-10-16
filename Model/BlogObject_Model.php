@@ -29,7 +29,7 @@
 
             $this->counter = 0;
 
-            $sql = ("SELECT * FROM BLOG ORDER BY DATE");
+            $sql = ("SELECT * FROM BLOG ORDER BY DATE DESC");
 
             $query_retrieve_images = $this->db->query($sql);
             

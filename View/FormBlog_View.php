@@ -6,6 +6,10 @@
 <title>UPLOAD PHOTOS BLOG</title>
 <style>
 
+body {
+  color: white;
+}
+
 table{
   position: relative;
   bottom: 90px;
@@ -28,7 +32,7 @@ table{
       exit();
 }
 
-    echo "User: " . $_SESSION["user"] . "<br><br>";
+    echo "User: " . $_SESSION["name"] . "<br><br>";
 ?>
 
 <h2>New entry</h2>

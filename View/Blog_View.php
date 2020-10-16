@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <title>BLOG</title>
+    <style>
+    
+        body {
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -20,7 +27,7 @@
             exit();
     }
 
-    echo "User: " . $_SESSION["user"] . "<br><br>";
+    echo "User: " . $_SESSION["name"] . "<br><br>";
 ?>
 
 <div class="log_back">
@@ -31,6 +38,7 @@
 
 </div>
     
+<div class="gallery">
 
     <?php
 
@@ -57,6 +65,8 @@
         } else {
 
             foreach($Blog_Table as $Item) {
+                echo "<figure class='gallery_item'>";
+
                 echo "<h3>" . $Item->getName() . "</h3>";
 
                 echo "<h4>" . $Item->getDate() . "</h4>";
@@ -67,7 +77,7 @@
 
                     echo "<img src='../images/";
 
-                    echo $Item->getImage() . "' width='300px' height='300px' />";
+                    echo $Item->getImage() . "' width='300px' height='300px' name='gallery_img' />";
 
                 }
 
@@ -78,7 +88,8 @@
                 //echo "<h4>Photo uploaded by " . getUser($id_photo) . "</h4>";
                 echo "<h4>Photo uploaded by " . $Blog_Id_Get . "</h4>";
 
-                echo "<hr />";
+                echo "</figure>";
+                //echo "<hr />";
             }
              
         }
@@ -90,6 +101,9 @@
     }
 
     ?>
+
+</div>
+
 
     <br />
 

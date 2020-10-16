@@ -39,6 +39,10 @@
 
             $user_password_db = $user_check_db[0]["PASSWORD"];
 
+
+            $user_name_db = $user_check_db[0]["NAME"];
+
+
             // Now we check whether the email and password match the ones in the database 
 
             if (!password_verify( $user_check_object->getUserPassword(), $user_password_db)) {
@@ -67,7 +71,12 @@
                 }
 
                 $_SESSION["user"] = $user_email_db;
+
                 $_SESSION["password"] = $user_password_db;
+
+                $_SESSION["name"] = $user_name_db;
+
+                //echo $_SESSION["name"];
 
                 header("location: ../View/Blog_View.php");
 

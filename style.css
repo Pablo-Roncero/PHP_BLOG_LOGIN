@@ -22,6 +22,7 @@ h2 {
 
 body {
     background-color: #003049;
+    overflow-x: hidden;
 }
 
 /* Style to the forms embedded in tables */
@@ -268,6 +269,26 @@ button {
     transition: all 0.2s;
     cursor: pointer;
     color: #FFFFFF;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Styling photo grid */
+
+.gallery {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 40vw);
+    grid-gap: 15px;
+    width: 100%;
+
+}
+
+.gallery_img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 /* -------------------------------------------------------------------------- */

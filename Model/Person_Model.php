@@ -45,7 +45,7 @@
             
             $user_email_introduced = $user_check->getUserEmail();
 
-            $sql = "SELECT EMAIL, PASSWORD FROM USERS WHERE EMAIL= '" . $user_email_introduced . "'";
+            $sql = "SELECT EMAIL, PASSWORD, NAME FROM USERS WHERE EMAIL= '" . $user_email_introduced . "'";
 
             //'" . $user_email_introduced . "'
             //$sql = "SELECT `EMAIL`, `PASSWORD` FROM `USERS` WHERE `EMAIL`='" . $user_email_introduced . "'"; 
