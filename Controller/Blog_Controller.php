@@ -11,7 +11,11 @@
 
 <?php
 
-    require_once("../Model/Blog_Model.php");
+    session_start();
+
+    if(isset($_SESSION['user'])) {
+
+        require_once("../Model/Blog_Model.php");
 
     require_once("../Model/BlogObject_Model.php");
 
@@ -89,6 +93,12 @@
         die("Error ". $e->getMessage() . $e->getLine());
 
     }
+
+    } else {
+        header("location: ../index.php");
+    }
+
+    
 
 ?>
     </ul>

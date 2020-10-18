@@ -60,8 +60,6 @@
 
         public function insertContent(Blog_Model $blog) {
 
-            session_start();
-
             $user = $_SESSION["user"];
 
             $sql_id = "SELECT ID FROM USERS WHERE EMAIL = '$user'";
