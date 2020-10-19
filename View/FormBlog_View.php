@@ -64,6 +64,5 @@ table{
   <button class="blog"><a href="Blog_View.php">BLOG</a></button>
 </form>
 <p>&nbsp;</p>
-
 </body>
 </html>

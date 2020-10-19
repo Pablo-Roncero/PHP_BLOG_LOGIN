@@ -15,7 +15,6 @@
 </head>
 <body>
 
-
 <h1>Welcome User</h1>
 
 <?php
@@ -91,7 +90,7 @@
                 echo "</figure>";
                 //echo "<hr />";
             }
-             
+            
         }
 
     } catch (Exception $e) {
@@ -103,11 +102,5 @@
     ?>
 
 </div>
-
-
-    <br />
-
-    <a href="FormBlog_View.php">Volver a la página de insercción</a>
-
 </body>
 </html>
